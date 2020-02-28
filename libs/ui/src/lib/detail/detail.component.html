@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="co-">
+
+    <mat-card *ngIf="repo$ | async as repo">
+      <mat-card-title>{{repo.name}}</mat-card-title>
+
+      <mat-card-content>{{repo.description}}</mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

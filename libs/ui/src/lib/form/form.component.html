@@ -1,1 +1,18 @@
-<p>form works!</p>
+
+
+<mat-card>
+
+  <mat-card-content *ngIf="!!form">
+    <form class="form-container" (ngSubmit)="onSubmit()" [formGroup]="form">
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="name" formControlName="name" type="name" name="name">
+        <mat-error *ngIf="form.controls['name'].hasError('required')">name is required</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-button> save </button>
+      <button type="button" mat-button *ngIf="selected && selected.id" (click)="deleteSelected.emit(selected.id)"> delete </button>
+      <button type="button" mat-button *ngIf="selected && selected.id || form.dirty" (click)="cancel.emit()"> cancel </button>
+    </form>
+  </mat-card-content>
+</mat-card>

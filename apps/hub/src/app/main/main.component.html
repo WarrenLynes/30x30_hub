@@ -1,10 +1,21 @@
 <div class="container">
   <div class="col-">
 
+    <h1>Your Repositories</h1>
+
     <hub-list
       [data]="repos$ | async"
       (selectItem)="selectRepo($event)"
     ></hub-list>
 
+  </div>
+
+  <div class="col-">
+    <hub-form
+      [selected]="repo$ | async"
+      (cancel)="cancel()"
+      (saveForm)="saveRepo($event)"
+      (deleteSelected)="deleteRepo($event)"
+    ></hub-form>
   </div>
 </div>

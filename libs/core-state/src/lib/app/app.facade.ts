@@ -23,9 +23,9 @@ export class AppFacade {
 
   initialize() {
     this.store.dispatch(appInit());
-    // const access_token = localStorage.getItem('ACCESS_TOKEN');
-    // if(access_token)
-    //   this.store.dispatch(authenticate({access_token}))
+    const access_token = localStorage.getItem('ACCESS_TOKEN');
+    if(access_token)
+      this.store.dispatch(authenticate({access_token}))
   }
 
   addLoad(loadId: string) {

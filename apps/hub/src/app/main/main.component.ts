@@ -24,4 +24,22 @@ export class MainComponent implements OnInit {
   selectRepo(id) {
     this.reposFacade.selectRepo(id);
   }
+
+  cancel() {
+    this.reposFacade.selectRepo(null);
+  }
+
+  saveRepo(repo: Repo) {
+    if(repo.id) {
+      this.reposFacade.updateRepo(repo);
+    } else {
+      this.reposFacade.createRepo(repo);
+    }
+    this.selectRepo(null);
+  }
+
+  deleteRepo(id) {
+    this.reposFacade.deleteRepo(id);
+    this.selectRepo(null);
+  }
 }

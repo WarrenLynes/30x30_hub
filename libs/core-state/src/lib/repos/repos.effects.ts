@@ -59,7 +59,7 @@ export class ReposEffects {
         this.appFacade.addLoad('[REPOS][UPDATE]');
 
         return this.reposService.update(action.repo).pipe(
-          map((repo: any) => reposActions.repoUpdated({ repo: action.repo })),
+          map((repo: any) => reposActions.repoUpdated({ repo })),
           tap(() => this.notifyService.openSnackBar('Successfully Updated a Repo')),
           tap(() => this.appFacade.removeLoad('[REPOS][UPDATE]'))
         );
@@ -80,7 +80,7 @@ export class ReposEffects {
         return this.reposService.delete(action.repoId).pipe(
           map((repos: any[]) => reposActions.repoDeleted({ repoId: action.repoId, repos })),
           tap(() => this.notifyService.openSnackBar('Successfully Deleted a Repo')),
-          tap(() => this.reposFacade.loadRepos()),
+          // tap(() => this.reposFacade.loadRepos()),
           tap(() => this.appFacade.removeLoad('[REPOS][DELETE]'))
         );
       },
