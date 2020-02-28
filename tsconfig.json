@@ -16,10 +16,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@hub/material": ["libs/material/src/index.ts"],
+      "@hub/core-state/material": ["libs/material/src/index.ts"],
       "@hub/core-state": ["libs/core-state/src/index.ts"],
       "@hub/core-data": ["libs/core-data/src/index.ts"],
-      "@hub/ui": ["libs/ui/src/index.ts"]
+      "@hub/ui": ["libs/ui/src/index.ts"],
+      "@hub/material": ["libs/material/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

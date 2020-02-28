@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="col-">
+
+    <hub-list
+      [data]="repos$ | async"
+      (selectItem)="selectRepo($event)"
+    ></hub-list>
+
+  </div>
+</div>

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  GITHUB_CLIENT_ID: 'd2ba109f7b69458bc71e',
+  GITHUB_CLIENT_SECRET: '140194ef9916efd1a68bb0d3c524afb4eed54229',
+  GITHUB_CLIENT_REDIRECT_URI: 'http://localhost:3333/auth-callback',
 };
 
 /*

@@ -21,9 +21,6 @@
     "server": {
       "tags": []
     },
-    "material": {
-      "tags": []
-    },
     "core-state": {
       "tags": []
     },
@@ -31,6 +28,9 @@
       "tags": []
     },
     "ui": {
+      "tags": []
+    },
+    "material": {
       "tags": []
     }
   }
